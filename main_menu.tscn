@@ -1,0 +1,84 @@
+[gd_scene load_steps=10 format=3 uid="uid://b8q26pdmi1djn"]
+
+[ext_resource type="Script" path="res://Scripts/main_menu.gd" id="1_kaoh8"]
+[ext_resource type="FontFile" uid="uid://ch4t5w1jud0i0" path="res://Assets/fonts/font.ttf" id="1_qa7gy"]
+[ext_resource type="Script" path="res://Scripts/Title.gd" id="2_8spe6"]
+[ext_resource type="Script" path="res://Scripts/Options.gd" id="3_lys7p"]
+[ext_resource type="AudioStream" uid="uid://de6ysy0vasr1k" path="res://Assets/sounds/select.wav" id="4_qpcj7"]
+[ext_resource type="AudioStream" uid="uid://o8t1v5eji6iu" path="res://Assets/sounds/confirm.wav" id="5_eypms"]
+
+[sub_resource type="LabelSettings" id="LabelSettings_x8pg8"]
+font = ExtResource("1_qa7gy")
+font_size = 130
+font_color = Color(0, 0, 0, 1)
+outline_size = 10
+
+[sub_resource type="LabelSettings" id="LabelSettings_hfk53"]
+font = ExtResource("1_qa7gy")
+font_size = 30
+font_color = Color(0, 0, 0, 1)
+outline_size = 5
+
+[sub_resource type="LabelSettings" id="LabelSettings_hriee"]
+font = ExtResource("1_qa7gy")
+font_size = 30
+font_color = Color(0, 0, 0, 1)
+outline_size = 5
+
+[node name="Main Menu" type="Node"]
+script = ExtResource("1_kaoh8")
+
+[node name="Title" type="Label" parent="."]
+anchors_preset = 5
+anchor_left = 0.5
+anchor_right = 0.5
+offset_left = -308.0
+offset_top = 150.0
+offset_right = 308.0
+offset_bottom = 284.0
+grow_horizontal = 2
+text = "Breakout"
+label_settings = SubResource("LabelSettings_x8pg8")
+horizontal_alignment = 1
+vertical_alignment = 1
+script = ExtResource("2_8spe6")
+
+[node name="Timer" type="Timer" parent="Title"]
+wait_time = 0.7
+autostart = true
+
+[node name="Options" type="VBoxContainer" parent="."]
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+offset_left = -213.0
+offset_top = 140.0
+offset_right = 213.0
+offset_bottom = 234.0
+grow_horizontal = 2
+grow_vertical = 2
+script = ExtResource("3_lys7p")
+
+[node name="Start Game" type="Label" parent="Options"]
+layout_mode = 2
+text = "Start Game"
+label_settings = SubResource("LabelSettings_hfk53")
+horizontal_alignment = 1
+vertical_alignment = 1
+
+[node name="Highscores" type="Label" parent="Options"]
+layout_mode = 2
+text = "HighScores"
+label_settings = SubResource("LabelSettings_hriee")
+horizontal_alignment = 1
+vertical_alignment = 1
+
+[node name="SelectSound" type="AudioStreamPlayer" parent="Options"]
+stream = ExtResource("4_qpcj7")
+
+[node name="ConfirmSound" type="AudioStreamPlayer" parent="Options"]
+stream = ExtResource("5_eypms")
+
+[connection signal="timeout" from="Title/Timer" to="Title" method="_on_timer_timeout"]

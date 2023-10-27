@@ -1,0 +1,143 @@
+[gd_scene load_steps=18 format=3 uid="uid://b3sy55d4ts3p3"]
+
+[ext_resource type="Script" path="res://Scripts/game.gd" id="1_e3npw"]
+[ext_resource type="PackedScene" uid="uid://bd8ulq0ty5m6t" path="res://player.tscn" id="1_qekf5"]
+[ext_resource type="Script" path="res://Scripts/Brick Container.gd" id="2_yo8j3"]
+[ext_resource type="FontFile" uid="uid://ch4t5w1jud0i0" path="res://Assets/fonts/font.ttf" id="3_ew2gg"]
+[ext_resource type="Script" path="res://Scripts/HealthContainer.gd" id="4_3hrl7"]
+[ext_resource type="Script" path="res://Scripts/PlayerScore.gd" id="4_tssyg"]
+[ext_resource type="AudioStream" uid="uid://c3rim3mex6vrk" path="res://Assets/sounds/hurt.wav" id="7_00u0l"]
+[ext_resource type="AudioStream" uid="uid://jxsl5ibgfgpp" path="res://Assets/sounds/recover.wav" id="8_1d36m"]
+[ext_resource type="AudioStream" uid="uid://bqw3ilvb5qiao" path="res://Assets/sounds/high_score.wav" id="9_1x2s1"]
+[ext_resource type="AudioStream" uid="uid://b8dvko83w52x7" path="res://Assets/sounds/victory.wav" id="10_do18q"]
+
+[sub_resource type="SegmentShape2D" id="SegmentShape2D_ktwy6"]
+b = Vector2(0, 720)
+
+[sub_resource type="SegmentShape2D" id="SegmentShape2D_sttjy"]
+a = Vector2(1280, 0)
+b = Vector2(1280, 720)
+
+[sub_resource type="SegmentShape2D" id="SegmentShape2D_4cisk"]
+b = Vector2(1280, 0)
+
+[sub_resource type="LabelSettings" id="LabelSettings_601ih"]
+font = ExtResource("3_ew2gg")
+font_size = 40
+outline_size = 10
+outline_color = Color(0, 0, 0, 1)
+
+[sub_resource type="LabelSettings" id="LabelSettings_tk7gs"]
+font = ExtResource("3_ew2gg")
+font_size = 40
+outline_size = 10
+outline_color = Color(0, 0, 0, 1)
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_48tpo"]
+size = Vector2(1280, 74)
+
+[sub_resource type="LabelSettings" id="LabelSettings_rwpbr"]
+font = ExtResource("3_ew2gg")
+font_size = 40
+outline_size = 10
+outline_color = Color(0, 0, 0, 1)
+
+[node name="Game" type="Node"]
+script = ExtResource("1_e3npw")
+
+[node name="Left Wall" type="StaticBody2D" parent="." groups=["wall"]]
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Left Wall"]
+shape = SubResource("SegmentShape2D_ktwy6")
+
+[node name="Right Wall" type="StaticBody2D" parent="." groups=["wall"]]
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Right Wall"]
+shape = SubResource("SegmentShape2D_sttjy")
+
+[node name="Top Wall" type="StaticBody2D" parent="." groups=["wall"]]
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Top Wall"]
+shape = SubResource("SegmentShape2D_4cisk")
+
+[node name="Brick Container" type="Node2D" parent="."]
+script = ExtResource("2_yo8j3")
+
+[node name="Player" parent="." groups=["player"] instance=ExtResource("1_qekf5")]
+position = Vector2(640, 650)
+
+[node name="PlayerScore" type="Label" parent="."]
+modulate = Color(1, 1, 1, 0.8)
+offset_left = 25.0
+offset_top = 12.0
+offset_right = 170.0
+offset_bottom = 55.0
+text = "Score: "
+label_settings = SubResource("LabelSettings_601ih")
+vertical_alignment = 1
+script = ExtResource("4_tssyg")
+
+[node name="HealthContainer" type="HBoxContainer" parent="."]
+offset_left = 880.0
+offset_top = 12.0
+offset_right = 1020.0
+offset_bottom = 55.0
+theme_override_constants/separation = 20
+script = ExtResource("4_3hrl7")
+
+[node name="Health" type="Label" parent="HealthContainer"]
+modulate = Color(1, 1, 1, 0.8)
+layout_mode = 2
+text = "Health:"
+label_settings = SubResource("LabelSettings_tk7gs")
+horizontal_alignment = 2
+vertical_alignment = 1
+
+[node name="Heart1" type="Sprite2D" parent="HealthContainer"]
+position = Vector2(170, 18)
+scale = Vector2(4, 4)
+
+[node name="Heart2" type="Sprite2D" parent="HealthContainer"]
+position = Vector2(220, 18)
+scale = Vector2(4, 4)
+
+[node name="Heart3" type="Sprite2D" parent="HealthContainer"]
+position = Vector2(270, 18)
+scale = Vector2(4, 4)
+
+[node name="OutOfBoundsArea" type="Area2D" parent="."]
+position = Vector2(0, 720.1)
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="OutOfBoundsArea"]
+position = Vector2(640, 60)
+shape = SubResource("RectangleShape2D_48tpo")
+
+[node name="HurtSoundEffect" type="AudioStreamPlayer" parent="."]
+stream = ExtResource("7_00u0l")
+
+[node name="Directions" type="Label" parent="."]
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+offset_left = -277.5
+offset_top = 90.0
+offset_right = 277.5
+offset_bottom = 133.0
+grow_horizontal = 2
+grow_vertical = 2
+text = "Press Space to Serve Ball"
+label_settings = SubResource("LabelSettings_rwpbr")
+
+[node name="ExtraLifeSoundEffect" type="AudioStreamPlayer" parent="."]
+stream = ExtResource("8_1d36m")
+
+[node name="HighscoreSoundEffect" type="AudioStreamPlayer" parent="."]
+stream = ExtResource("9_1x2s1")
+
+[node name="VictorySoundEffect" type="AudioStreamPlayer3D" parent="."]
+stream = ExtResource("10_do18q")
+
+[connection signal="empty" from="Brick Container" to="." method="_on_brick_container_empty"]
+[connection signal="body_entered" from="OutOfBoundsArea" to="." method="_on_area_2d_body_entered"]

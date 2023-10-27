@@ -1,0 +1,13 @@
+[gd_scene load_steps=3 format=3 uid="uid://do80wxvrsfpr0"]
+
+[ext_resource type="Texture2D" uid="uid://ckcupgk4he1ng" path="res://Assets/graphics/blocks.png" id="1_jdy18"]
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_glkk2"]
+atlas = ExtResource("1_jdy18")
+region = Rect2(0, 80, 128, 16)
+
+[node name="Blue Paddle" type="TextureRect"]
+offset_right = 128.0
+offset_bottom = 16.0
+texture = SubResource("AtlasTexture_glkk2")
+stretch_mode = 2

@@ -1,0 +1,13 @@
+[gd_scene load_steps=3 format=3 uid="uid://dyl8dcbq7pdti"]
+
+[ext_resource type="Texture2D" uid="uid://ckcupgk4he1ng" path="res://Assets/graphics/blocks.png" id="1_jfm5h"]
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_76ph3"]
+atlas = ExtResource("1_jfm5h")
+region = Rect2(0, 32, 32, 16)
+
+[node name="Purple Brick" type="TextureRect"]
+offset_right = 32.0
+offset_bottom = 16.0
+texture = SubResource("AtlasTexture_76ph3")
+stretch_mode = 2

@@ -1,0 +1,21 @@
+[gd_scene load_steps=4 format=3 uid="uid://ddx6kxi7crg7k"]
+
+[ext_resource type="Texture2D" uid="uid://ckcupgk4he1ng" path="res://Assets/graphics/blocks.png" id="1_py4b3"]
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_j64kn"]
+atlas = ExtResource("1_py4b3")
+region = Rect2(64, 48, 32, 16)
+
+[sub_resource type="CapsuleShape2D" id="CapsuleShape2D_8dkfw"]
+radius = 16.0
+height = 64.0
+
+[node name="Immovable Brick" type="StaticBody2D" groups=["unbreakable"]]
+
+[node name="Sprite2D" type="Sprite2D" parent="."]
+scale = Vector2(2, 2)
+texture = SubResource("AtlasTexture_j64kn")
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="."]
+rotation = 1.5708
+shape = SubResource("CapsuleShape2D_8dkfw")

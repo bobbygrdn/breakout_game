@@ -1,0 +1,55 @@
+[gd_scene load_steps=7 format=3 uid="uid://2qsimbti5225"]
+
+[ext_resource type="Script" path="res://Scripts/game_over_screen.gd" id="1_5ucb2"]
+[ext_resource type="FontFile" uid="uid://ch4t5w1jud0i0" path="res://Assets/fonts/font.ttf" id="1_ftyet"]
+[ext_resource type="Script" path="res://Scripts/game_over_directions.gd" id="2_nytxj"]
+[ext_resource type="AudioStream" uid="uid://o8t1v5eji6iu" path="res://Assets/sounds/confirm.wav" id="4_yiq2f"]
+
+[sub_resource type="LabelSettings" id="LabelSettings_ib7jb"]
+font = ExtResource("1_ftyet")
+font_size = 150
+outline_size = 20
+outline_color = Color(0, 0, 0, 1)
+
+[sub_resource type="LabelSettings" id="LabelSettings_52e6t"]
+font = ExtResource("1_ftyet")
+font_size = 70
+outline_size = 10
+outline_color = Color(0, 0, 0, 1)
+
+[node name="GameOverScreen" type="Node"]
+script = ExtResource("1_5ucb2")
+
+[node name="Message" type="Label" parent="."]
+anchors_preset = 5
+anchor_left = 0.5
+anchor_right = 0.5
+offset_left = -636.0
+offset_right = 644.0
+offset_bottom = 376.0
+grow_horizontal = 2
+text = "GAME OVER"
+label_settings = SubResource("LabelSettings_ib7jb")
+horizontal_alignment = 1
+vertical_alignment = 1
+
+[node name="Directions" type="Label" parent="."]
+anchors_preset = 5
+anchor_left = 0.5
+anchor_right = 0.5
+offset_left = -20.0
+offset_top = 520.0
+offset_right = 20.0
+offset_bottom = 543.0
+grow_horizontal = 2
+text = "Press Enter to Continue"
+label_settings = SubResource("LabelSettings_52e6t")
+script = ExtResource("2_nytxj")
+
+[node name="Timer" type="Timer" parent="Directions"]
+autostart = true
+
+[node name="ConfirmEffect" type="AudioStreamPlayer" parent="."]
+stream = ExtResource("4_yiq2f")
+
+[connection signal="timeout" from="Directions/Timer" to="Directions" method="_on_timer_timeout"]

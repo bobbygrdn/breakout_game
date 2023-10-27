@@ -1,0 +1,71 @@
+[gd_scene load_steps=7 format=3 uid="uid://c2ox5r6dqhif4"]
+
+[ext_resource type="Script" path="res://Scripts/highscores.gd" id="1_1tw33"]
+[ext_resource type="FontFile" uid="uid://ch4t5w1jud0i0" path="res://Assets/fonts/font.ttf" id="2_yxn51"]
+[ext_resource type="AudioStream" uid="uid://o8t1v5eji6iu" path="res://Assets/sounds/confirm.wav" id="3_i75q1"]
+[ext_resource type="Script" path="res://Scripts/highscores_directions.gd" id="4_tspsh"]
+
+[sub_resource type="LabelSettings" id="LabelSettings_yak25"]
+font = ExtResource("2_yxn51")
+font_size = 50
+outline_size = 10
+outline_color = Color(0, 0, 0, 1)
+
+[sub_resource type="LabelSettings" id="LabelSettings_0eyot"]
+font = ExtResource("2_yxn51")
+font_size = 40
+outline_size = 10
+outline_color = Color(0, 0, 0, 1)
+
+[node name="Highscores" type="Node"]
+script = ExtResource("1_1tw33")
+
+[node name="Title" type="Label" parent="."]
+anchors_preset = 5
+anchor_left = 0.5
+anchor_right = 0.5
+offset_left = -140.0
+offset_top = 50.0
+offset_right = 140.0
+offset_bottom = 104.0
+grow_horizontal = 2
+text = "Highscores"
+label_settings = SubResource("LabelSettings_yak25")
+horizontal_alignment = 1
+vertical_alignment = 1
+
+[node name="Scores" type="VBoxContainer" parent="."]
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+offset_left = -20.0
+offset_top = -20.0
+offset_right = 20.0
+offset_bottom = 20.0
+grow_horizontal = 2
+grow_vertical = 2
+
+[node name="ConfirmEffect" type="AudioStreamPlayer" parent="."]
+stream = ExtResource("3_i75q1")
+
+[node name="Directions" type="Label" parent="."]
+anchors_preset = 5
+anchor_left = 0.5
+anchor_right = 0.5
+offset_left = -316.0
+offset_top = 660.0
+offset_right = 316.0
+offset_bottom = 694.0
+grow_horizontal = 2
+text = "Press Enter to Go Back to Main Screen"
+label_settings = SubResource("LabelSettings_0eyot")
+horizontal_alignment = 1
+vertical_alignment = 1
+script = ExtResource("4_tspsh")
+
+[node name="Timer" type="Timer" parent="Directions"]
+autostart = true
+
+[connection signal="timeout" from="Directions/Timer" to="Directions" method="_on_timer_timeout"]

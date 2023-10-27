@@ -1,0 +1,25 @@
+[gd_scene load_steps=5 format=3 uid="uid://bd8ulq0ty5m6t"]
+
+[ext_resource type="Script" path="res://Scripts/player.gd" id="1_3ntvv"]
+[ext_resource type="Texture2D" uid="uid://ckcupgk4he1ng" path="res://Assets/graphics/blocks.png" id="2_vo4qr"]
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_3u8tk"]
+atlas = ExtResource("2_vo4qr")
+region = Rect2(0, 80, 128, 16)
+
+[sub_resource type="CapsuleShape2D" id="CapsuleShape2D_43dxt"]
+radius = 12.0
+height = 192.0
+
+[node name="Player" type="CharacterBody2D"]
+safe_margin = 0.001
+script = ExtResource("1_3ntvv")
+
+[node name="Sprite2D" type="Sprite2D" parent="."]
+scale = Vector2(1.5, 1.5)
+texture = SubResource("AtlasTexture_3u8tk")
+region_rect = Rect2(0, 80, 128, 16)
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="."]
+rotation = 1.5708
+shape = SubResource("CapsuleShape2D_43dxt")

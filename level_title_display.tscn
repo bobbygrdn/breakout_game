@@ -1,0 +1,23 @@
+[gd_scene load_steps=3 format=3 uid="uid://c2tutvn81d0qc"]
+
+[ext_resource type="LabelSettings" uid="uid://dnlqbvhlinavu" path="res://level_label_settings.tres" id="1_sr23q"]
+[ext_resource type="Script" path="res://Scripts/level_title_display.gd" id="2_x8uei"]
+
+[node name="Display" type="Label"]
+z_index = 1
+offset_left = 69.0
+offset_top = 50.0
+offset_right = 1223.0
+offset_bottom = 290.0
+text = "Level 1"
+label_settings = ExtResource("1_sr23q")
+horizontal_alignment = 1
+vertical_alignment = 1
+script = ExtResource("2_x8uei")
+
+[node name="Timer" type="Timer" parent="."]
+wait_time = 3.0
+one_shot = true
+autostart = true
+
+[connection signal="timeout" from="Timer" to="." method="_on_timer_timeout"]

@@ -1,0 +1,103 @@
+[gd_scene load_steps=4 format=3 uid="uid://ugbkiedr15uj"]
+
+[ext_resource type="PackedScene" uid="uid://ddx6kxi7crg7k" path="res://immovable_brick.tscn" id="1_1l31y"]
+[ext_resource type="PackedScene" uid="uid://c2tutvn81d0qc" path="res://level_title_display.tscn" id="1_8co6u"]
+[ext_resource type="PackedScene" uid="uid://bks8eiemntx38" path="res://brick.tscn" id="2_6n7id"]
+
+[node name="Level5" type="Node2D" groups=["level"]]
+
+[node name="Display" parent="." instance=ExtResource("1_8co6u")]
+text = "Level 5"
+
+[node name="Immovable Brick" parent="." instance=ExtResource("1_1l31y")]
+position = Vector2(576, 120)
+
+[node name="Immovable Brick2" parent="." instance=ExtResource("1_1l31y")]
+position = Vector2(704, 120)
+
+[node name="Immovable Brick3" parent="." instance=ExtResource("1_1l31y")]
+position = Vector2(768, 154)
+
+[node name="Immovable Brick4" parent="." instance=ExtResource("1_1l31y")]
+position = Vector2(768, 188)
+
+[node name="Immovable Brick5" parent="." instance=ExtResource("1_1l31y")]
+position = Vector2(768, 222)
+
+[node name="Immovable Brick6" parent="." instance=ExtResource("1_1l31y")]
+position = Vector2(768, 256)
+
+[node name="Immovable Brick20" parent="." instance=ExtResource("1_1l31y")]
+position = Vector2(768, 290)
+
+[node name="Immovable Brick7" parent="." instance=ExtResource("1_1l31y")]
+position = Vector2(512, 154)
+
+[node name="Immovable Brick8" parent="." instance=ExtResource("1_1l31y")]
+position = Vector2(512, 188)
+
+[node name="Immovable Brick9" parent="." instance=ExtResource("1_1l31y")]
+position = Vector2(512, 222)
+
+[node name="Immovable Brick10" parent="." instance=ExtResource("1_1l31y")]
+position = Vector2(512, 256)
+
+[node name="Immovable Brick19" parent="." instance=ExtResource("1_1l31y")]
+position = Vector2(512, 290)
+
+[node name="Immovable Brick11" parent="." instance=ExtResource("1_1l31y")]
+position = Vector2(576, 324)
+
+[node name="Immovable Brick12" parent="." instance=ExtResource("1_1l31y")]
+position = Vector2(704, 324)
+
+[node name="Immovable Brick13" parent="." instance=ExtResource("1_1l31y")]
+position = Vector2(704, 358)
+
+[node name="Immovable Brick14" parent="." instance=ExtResource("1_1l31y")]
+position = Vector2(704, 392)
+
+[node name="Immovable Brick17" parent="." instance=ExtResource("1_1l31y")]
+position = Vector2(640, 392)
+
+[node name="Immovable Brick15" parent="." instance=ExtResource("1_1l31y")]
+position = Vector2(576, 358)
+
+[node name="Immovable Brick16" parent="." instance=ExtResource("1_1l31y")]
+position = Vector2(576, 392)
+
+[node name="Brick" parent="." instance=ExtResource("2_6n7id")]
+position = Vector2(640, 120)
+
+[node name="Brick6" parent="." instance=ExtResource("2_6n7id")]
+position = Vector2(640, 154)
+
+[node name="Brick7" parent="." instance=ExtResource("2_6n7id")]
+position = Vector2(640, 188)
+
+[node name="Brick2" parent="." instance=ExtResource("2_6n7id")]
+position = Vector2(576, 256)
+
+[node name="Brick4" parent="." instance=ExtResource("2_6n7id")]
+position = Vector2(704, 256)
+
+[node name="Brick8" parent="." instance=ExtResource("2_6n7id")]
+position = Vector2(704, 222)
+
+[node name="Brick9" parent="." instance=ExtResource("2_6n7id")]
+position = Vector2(576, 222)
+
+[node name="Brick5" parent="." instance=ExtResource("2_6n7id")]
+position = Vector2(640, 222)
+
+[node name="Brick10" parent="." instance=ExtResource("2_6n7id")]
+position = Vector2(704, 290)
+
+[node name="Brick11" parent="." instance=ExtResource("2_6n7id")]
+position = Vector2(576, 290)
+
+[node name="Brick12" parent="." instance=ExtResource("2_6n7id")]
+position = Vector2(640, 290)
+
+[node name="Brick13" parent="." instance=ExtResource("2_6n7id")]
+position = Vector2(640, 324)

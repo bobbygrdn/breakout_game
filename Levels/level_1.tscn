@@ -1,0 +1,344 @@
+[gd_scene load_steps=3 format=3 uid="uid://dd0vhxb75nmo3"]
+
+[ext_resource type="PackedScene" uid="uid://bks8eiemntx38" path="res://brick.tscn" id="1_38vsf"]
+[ext_resource type="PackedScene" uid="uid://c2tutvn81d0qc" path="res://level_title_display.tscn" id="2_03k2n"]
+
+[node name="Level 1" type="Node2D" groups=["level"]]
+
+[node name="Display" parent="." instance=ExtResource("2_03k2n")]
+
+[node name="Brick3" parent="." instance=ExtResource("1_38vsf")]
+unique_name_in_owner = true
+position = Vector2(228, 69)
+
+[node name="Brick4" parent="." instance=ExtResource("1_38vsf")]
+unique_name_in_owner = true
+position = Vector2(292, 69)
+
+[node name="Brick5" parent="." instance=ExtResource("1_38vsf")]
+unique_name_in_owner = true
+position = Vector2(356, 69)
+
+[node name="Brick6" parent="." instance=ExtResource("1_38vsf")]
+unique_name_in_owner = true
+position = Vector2(420, 69)
+
+[node name="Brick7" parent="." instance=ExtResource("1_38vsf")]
+unique_name_in_owner = true
+position = Vector2(484, 69)
+
+[node name="Brick8" parent="." instance=ExtResource("1_38vsf")]
+unique_name_in_owner = true
+position = Vector2(548, 69)
+
+[node name="Brick11" parent="." instance=ExtResource("1_38vsf")]
+unique_name_in_owner = true
+position = Vector2(228, 109)
+
+[node name="Brick12" parent="." instance=ExtResource("1_38vsf")]
+unique_name_in_owner = true
+position = Vector2(292, 109)
+
+[node name="Brick13" parent="." instance=ExtResource("1_38vsf")]
+unique_name_in_owner = true
+position = Vector2(356, 109)
+
+[node name="Brick14" parent="." instance=ExtResource("1_38vsf")]
+unique_name_in_owner = true
+position = Vector2(420, 109)
+
+[node name="Brick15" parent="." instance=ExtResource("1_38vsf")]
+unique_name_in_owner = true
+position = Vector2(484, 109)
+
+[node name="Brick16" parent="." instance=ExtResource("1_38vsf")]
+unique_name_in_owner = true
+position = Vector2(548, 109)
+
+[node name="Brick19" parent="." instance=ExtResource("1_38vsf")]
+unique_name_in_owner = true
+position = Vector2(228, 149)
+
+[node name="Brick20" parent="." instance=ExtResource("1_38vsf")]
+unique_name_in_owner = true
+position = Vector2(292, 149)
+
+[node name="Brick21" parent="." instance=ExtResource("1_38vsf")]
+unique_name_in_owner = true
+position = Vector2(356, 149)
+
+[node name="Brick22" parent="." instance=ExtResource("1_38vsf")]
+unique_name_in_owner = true
+position = Vector2(420, 149)
+
+[node name="Brick23" parent="." instance=ExtResource("1_38vsf")]
+unique_name_in_owner = true
+position = Vector2(484, 149)
+
+[node name="Brick24" parent="." instance=ExtResource("1_38vsf")]
+unique_name_in_owner = true
+position = Vector2(548, 149)
+
+[node name="Brick27" parent="." instance=ExtResource("1_38vsf")]
+unique_name_in_owner = true
+position = Vector2(228, 189)
+
+[node name="Brick28" parent="." instance=ExtResource("1_38vsf")]
+unique_name_in_owner = true
+position = Vector2(292, 189)
+
+[node name="Brick29" parent="." instance=ExtResource("1_38vsf")]
+unique_name_in_owner = true
+position = Vector2(356, 189)
+
+[node name="Brick30" parent="." instance=ExtResource("1_38vsf")]
+unique_name_in_owner = true
+position = Vector2(420, 189)
+
+[node name="Brick31" parent="." instance=ExtResource("1_38vsf")]
+unique_name_in_owner = true
+position = Vector2(484, 189)
+
+[node name="Brick32" parent="." instance=ExtResource("1_38vsf")]
+unique_name_in_owner = true
+position = Vector2(548, 189)
+
+[node name="Brick35" parent="." instance=ExtResource("1_38vsf")]
+unique_name_in_owner = true
+position = Vector2(228, 229)
+
+[node name="Brick36" parent="." instance=ExtResource("1_38vsf")]
+unique_name_in_owner = true
+position = Vector2(292, 229)
+
+[node name="Brick37" parent="." instance=ExtResource("1_38vsf")]
+unique_name_in_owner = true
+position = Vector2(356, 229)
+
+[node name="Brick38" parent="." instance=ExtResource("1_38vsf")]
+unique_name_in_owner = true
+position = Vector2(420, 229)
+
+[node name="Brick39" parent="." instance=ExtResource("1_38vsf")]
+unique_name_in_owner = true
+position = Vector2(484, 229)
+
+[node name="Brick40" parent="." instance=ExtResource("1_38vsf")]
+unique_name_in_owner = true
+position = Vector2(548, 229)
+
+[node name="Brick41" parent="." instance=ExtResource("1_38vsf")]
+unique_name_in_owner = true
+position = Vector2(612, 69)
+
+[node name="Brick42" parent="." instance=ExtResource("1_38vsf")]
+unique_name_in_owner = true
+position = Vector2(676, 69)
+
+[node name="Brick43" parent="." instance=ExtResource("1_38vsf")]
+unique_name_in_owner = true
+position = Vector2(740, 69)
+
+[node name="Brick44" parent="." instance=ExtResource("1_38vsf")]
+unique_name_in_owner = true
+position = Vector2(804, 69)
+
+[node name="Brick45" parent="." instance=ExtResource("1_38vsf")]
+unique_name_in_owner = true
+position = Vector2(868, 69)
+
+[node name="Brick46" parent="." instance=ExtResource("1_38vsf")]
+unique_name_in_owner = true
+position = Vector2(932, 69)
+
+[node name="Brick47" parent="." instance=ExtResource("1_38vsf")]
+unique_name_in_owner = true
+position = Vector2(996, 69)
+
+[node name="Brick48" parent="." instance=ExtResource("1_38vsf")]
+unique_name_in_owner = true
+position = Vector2(1060, 69)
+
+[node name="Brick49" parent="." instance=ExtResource("1_38vsf")]
+unique_name_in_owner = true
+position = Vector2(612, 109)
+
+[node name="Brick50" parent="." instance=ExtResource("1_38vsf")]
+unique_name_in_owner = true
+position = Vector2(676, 109)
+
+[node name="Brick51" parent="." instance=ExtResource("1_38vsf")]
+unique_name_in_owner = true
+position = Vector2(740, 109)
+
+[node name="Brick52" parent="." instance=ExtResource("1_38vsf")]
+unique_name_in_owner = true
+position = Vector2(804, 109)
+
+[node name="Brick53" parent="." instance=ExtResource("1_38vsf")]
+unique_name_in_owner = true
+position = Vector2(868, 109)
+
+[node name="Brick54" parent="." instance=ExtResource("1_38vsf")]
+unique_name_in_owner = true
+position = Vector2(932, 109)
+
+[node name="Brick55" parent="." instance=ExtResource("1_38vsf")]
+unique_name_in_owner = true
+position = Vector2(996, 109)
+
+[node name="Brick56" parent="." instance=ExtResource("1_38vsf")]
+unique_name_in_owner = true
+position = Vector2(1060, 109)
+
+[node name="Brick57" parent="." instance=ExtResource("1_38vsf")]
+unique_name_in_owner = true
+position = Vector2(612, 149)
+
+[node name="Brick58" parent="." instance=ExtResource("1_38vsf")]
+unique_name_in_owner = true
+position = Vector2(676, 149)
+
+[node name="Brick59" parent="." instance=ExtResource("1_38vsf")]
+unique_name_in_owner = true
+position = Vector2(740, 149)
+
+[node name="Brick60" parent="." instance=ExtResource("1_38vsf")]
+unique_name_in_owner = true
+position = Vector2(804, 149)
+
+[node name="Brick61" parent="." instance=ExtResource("1_38vsf")]
+unique_name_in_owner = true
+position = Vector2(868, 149)
+
+[node name="Brick62" parent="." instance=ExtResource("1_38vsf")]
+unique_name_in_owner = true
+position = Vector2(932, 149)
+
+[node name="Brick63" parent="." instance=ExtResource("1_38vsf")]
+unique_name_in_owner = true
+position = Vector2(996, 149)
+
+[node name="Brick64" parent="." instance=ExtResource("1_38vsf")]
+unique_name_in_owner = true
+position = Vector2(1060, 149)
+
+[node name="Brick65" parent="." instance=ExtResource("1_38vsf")]
+unique_name_in_owner = true
+position = Vector2(612, 189)
+
+[node name="Brick66" parent="." instance=ExtResource("1_38vsf")]
+unique_name_in_owner = true
+position = Vector2(676, 189)
+
+[node name="Brick67" parent="." instance=ExtResource("1_38vsf")]
+unique_name_in_owner = true
+position = Vector2(740, 189)
+
+[node name="Brick68" parent="." instance=ExtResource("1_38vsf")]
+unique_name_in_owner = true
+position = Vector2(804, 189)
+
+[node name="Brick69" parent="." instance=ExtResource("1_38vsf")]
+unique_name_in_owner = true
+position = Vector2(868, 189)
+
+[node name="Brick70" parent="." instance=ExtResource("1_38vsf")]
+unique_name_in_owner = true
+position = Vector2(932, 189)
+
+[node name="Brick71" parent="." instance=ExtResource("1_38vsf")]
+unique_name_in_owner = true
+position = Vector2(996, 189)
+
+[node name="Brick72" parent="." instance=ExtResource("1_38vsf")]
+unique_name_in_owner = true
+position = Vector2(1060, 189)
+
+[node name="Brick73" parent="." instance=ExtResource("1_38vsf")]
+unique_name_in_owner = true
+position = Vector2(612, 229)
+
+[node name="Brick74" parent="." instance=ExtResource("1_38vsf")]
+unique_name_in_owner = true
+position = Vector2(676, 229)
+
+[node name="Brick75" parent="." instance=ExtResource("1_38vsf")]
+unique_name_in_owner = true
+position = Vector2(740, 229)
+
+[node name="Brick76" parent="." instance=ExtResource("1_38vsf")]
+unique_name_in_owner = true
+position = Vector2(804, 229)
+
+[node name="Brick77" parent="." instance=ExtResource("1_38vsf")]
+unique_name_in_owner = true
+position = Vector2(868, 229)
+
+[node name="Brick78" parent="." instance=ExtResource("1_38vsf")]
+unique_name_in_owner = true
+position = Vector2(932, 229)
+
+[node name="Brick79" parent="." instance=ExtResource("1_38vsf")]
+unique_name_in_owner = true
+position = Vector2(996, 229)
+
+[node name="Brick80" parent="." instance=ExtResource("1_38vsf")]
+unique_name_in_owner = true
+position = Vector2(1060, 229)
+
+[node name="Brick93" parent="." instance=ExtResource("1_38vsf")]
+unique_name_in_owner = true
+position = Vector2(228, 270)
+
+[node name="Brick94" parent="." instance=ExtResource("1_38vsf")]
+unique_name_in_owner = true
+position = Vector2(292, 270)
+
+[node name="Brick95" parent="." instance=ExtResource("1_38vsf")]
+unique_name_in_owner = true
+position = Vector2(356, 270)
+
+[node name="Brick96" parent="." instance=ExtResource("1_38vsf")]
+unique_name_in_owner = true
+position = Vector2(420, 270)
+
+[node name="Brick97" parent="." instance=ExtResource("1_38vsf")]
+unique_name_in_owner = true
+position = Vector2(484, 270)
+
+[node name="Brick98" parent="." instance=ExtResource("1_38vsf")]
+unique_name_in_owner = true
+position = Vector2(548, 270)
+
+[node name="Brick131" parent="." instance=ExtResource("1_38vsf")]
+unique_name_in_owner = true
+position = Vector2(612, 270)
+
+[node name="Brick132" parent="." instance=ExtResource("1_38vsf")]
+unique_name_in_owner = true
+position = Vector2(676, 270)
+
+[node name="Brick133" parent="." instance=ExtResource("1_38vsf")]
+unique_name_in_owner = true
+position = Vector2(740, 270)
+
+[node name="Brick134" parent="." instance=ExtResource("1_38vsf")]
+unique_name_in_owner = true
+position = Vector2(804, 270)
+
+[node name="Brick135" parent="." instance=ExtResource("1_38vsf")]
+unique_name_in_owner = true
+position = Vector2(868, 270)
+
+[node name="Brick136" parent="." instance=ExtResource("1_38vsf")]
+unique_name_in_owner = true
+position = Vector2(932, 270)
+
+[node name="Brick137" parent="." instance=ExtResource("1_38vsf")]
+unique_name_in_owner = true
+position = Vector2(996, 270)
+
+[node name="Brick138" parent="." instance=ExtResource("1_38vsf")]
+unique_name_in_owner = true
+position = Vector2(1060, 270)

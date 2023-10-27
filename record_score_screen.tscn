@@ -1,0 +1,88 @@
+[gd_scene load_steps=8 format=3 uid="uid://3848ipd3vv5n"]
+
+[ext_resource type="FontFile" uid="uid://ch4t5w1jud0i0" path="res://Assets/fonts/font.ttf" id="1_q25yg"]
+[ext_resource type="Script" path="res://Scripts/ScoreInitialsContainer.gd" id="2_kapxr"]
+[ext_resource type="AudioStream" uid="uid://boow6lc0ejtgs" path="res://Assets/sounds/wall_hit.wav" id="3_mbljv"]
+[ext_resource type="AudioStream" uid="uid://de6ysy0vasr1k" path="res://Assets/sounds/select.wav" id="4_36ph2"]
+[ext_resource type="AudioStream" uid="uid://o8t1v5eji6iu" path="res://Assets/sounds/confirm.wav" id="5_ifyde"]
+
+[sub_resource type="Theme" id="Theme_ufahm"]
+default_font = ExtResource("1_q25yg")
+default_font_size = 100
+
+[sub_resource type="LabelSettings" id="LabelSettings_ovvis"]
+font = ExtResource("1_q25yg")
+font_size = 30
+outline_size = 10
+outline_color = Color(0, 0, 0, 1)
+
+[node name="RecordScoreScreen" type="Node"]
+
+[node name="ScoreInitialsContainer" type="HBoxContainer" parent="."]
+anchors_preset = 5
+anchor_left = 0.5
+anchor_right = 0.5
+offset_top = 360.0
+offset_right = 38.0
+offset_bottom = 423.0
+grow_horizontal = 2
+theme = SubResource("Theme_ufahm")
+theme_override_constants/separation = 100
+alignment = 1
+script = ExtResource("2_kapxr")
+
+[node name="First Initial" type="Label" parent="ScoreInitialsContainer"]
+unique_name_in_owner = true
+layout_mode = 2
+theme_override_colors/font_outline_color = Color(0, 0, 0, 1)
+theme_override_constants/outline_size = 10
+horizontal_alignment = 1
+vertical_alignment = 1
+
+[node name="Second Initial" type="Label" parent="ScoreInitialsContainer"]
+unique_name_in_owner = true
+layout_mode = 2
+theme_override_colors/font_outline_color = Color(0, 0, 0, 1)
+theme_override_constants/outline_size = 10
+horizontal_alignment = 1
+vertical_alignment = 1
+
+[node name="Third Initial" type="Label" parent="ScoreInitialsContainer"]
+unique_name_in_owner = true
+layout_mode = 2
+theme_override_colors/font_outline_color = Color(0, 0, 0, 1)
+theme_override_constants/outline_size = 10
+horizontal_alignment = 1
+vertical_alignment = 1
+
+[node name="Timer" type="Timer" parent="ScoreInitialsContainer"]
+autostart = true
+
+[node name="SelectionEffect" type="AudioStreamPlayer" parent="ScoreInitialsContainer"]
+stream = ExtResource("3_mbljv")
+
+[node name="ChangeEffect" type="AudioStreamPlayer" parent="ScoreInitialsContainer"]
+stream = ExtResource("4_36ph2")
+
+[node name="ConfirmEffect" type="AudioStreamPlayer" parent="ScoreInitialsContainer"]
+stream = ExtResource("5_ifyde")
+
+[node name="Directions" type="Label" parent="."]
+anchors_preset = 5
+anchor_left = 0.5
+anchor_right = 0.5
+offset_left = -401.0
+offset_top = 100.0
+offset_right = 401.0
+offset_bottom = 270.0
+grow_horizontal = 2
+text = "Press the Up or Down Arrows to Choose a Letter
+
+Press the Space button to Change Initial
+
+Press the Enter button to Confirm"
+label_settings = SubResource("LabelSettings_ovvis")
+horizontal_alignment = 1
+vertical_alignment = 1
+
+[connection signal="timeout" from="ScoreInitialsContainer/Timer" to="ScoreInitialsContainer" method="_on_timer_timeout"]

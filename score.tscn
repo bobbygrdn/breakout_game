@@ -1,0 +1,55 @@
+[gd_scene load_steps=6 format=3 uid="uid://bbbg274txki6u"]
+
+[ext_resource type="FontFile" uid="uid://ch4t5w1jud0i0" path="res://Assets/fonts/font.ttf" id="1_hu8ne"]
+
+[sub_resource type="Theme" id="Theme_ug8dc"]
+default_font = ExtResource("1_hu8ne")
+
+[sub_resource type="LabelSettings" id="LabelSettings_014up"]
+font_size = 40
+outline_size = 10
+outline_color = Color(0, 0, 0, 1)
+
+[sub_resource type="LabelSettings" id="LabelSettings_qdm23"]
+font_size = 40
+outline_size = 10
+outline_color = Color(0, 0, 0, 1)
+
+[sub_resource type="LabelSettings" id="LabelSettings_21use"]
+font_size = 40
+outline_size = 10
+outline_color = Color(0, 0, 0, 1)
+
+[node name="Score" type="HBoxContainer"]
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+offset_left = -20.0
+offset_top = -20.0
+offset_right = 20.0
+offset_bottom = 20.0
+grow_horizontal = 2
+grow_vertical = 2
+theme = SubResource("Theme_ug8dc")
+theme_override_constants/separation = 30
+
+[node name="Placement" type="Label" parent="."]
+custom_minimum_size = Vector2(125, 0)
+layout_mode = 2
+label_settings = SubResource("LabelSettings_014up")
+vertical_alignment = 1
+
+[node name="Initials" type="Label" parent="."]
+custom_minimum_size = Vector2(125, 0)
+layout_mode = 2
+label_settings = SubResource("LabelSettings_qdm23")
+vertical_alignment = 1
+
+[node name="Score" type="Label" parent="."]
+custom_minimum_size = Vector2(125, 0)
+layout_mode = 2
+label_settings = SubResource("LabelSettings_21use")
+horizontal_alignment = 2
+vertical_alignment = 1

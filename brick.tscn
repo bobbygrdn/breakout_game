@@ -1,0 +1,19 @@
+[gd_scene load_steps=3 format=3 uid="uid://bks8eiemntx38"]
+
+[ext_resource type="Script" path="res://Scripts/brick.gd" id="1_vhbxi"]
+
+[sub_resource type="CapsuleShape2D" id="CapsuleShape2D_4lqc8"]
+radius = 8.0
+height = 32.0
+
+[node name="Brick" type="StaticBody2D" groups=["brick"]]
+scale = Vector2(2, 2)
+script = ExtResource("1_vhbxi")
+
+[node name="Sprite2D" type="Sprite2D" parent="."]
+region_enabled = true
+region_rect = Rect2(0, 0, 32, 16)
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="."]
+rotation = 1.5708
+shape = SubResource("CapsuleShape2D_4lqc8")

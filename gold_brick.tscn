@@ -1,0 +1,13 @@
+[gd_scene load_steps=3 format=3 uid="uid://clq7c4p6nv8va"]
+
+[ext_resource type="Texture2D" uid="uid://ckcupgk4he1ng" path="res://Assets/graphics/blocks.png" id="1_s2rig"]
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_rsyfx"]
+atlas = ExtResource("1_s2rig")
+region = Rect2(128, 32, 32, 16)
+
+[node name="Gold Brick" type="TextureRect"]
+offset_right = 32.0
+offset_bottom = 16.0
+texture = SubResource("AtlasTexture_rsyfx")
+stretch_mode = 2
